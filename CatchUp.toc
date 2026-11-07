@@ -1,0 +1,13 @@
+## Interface: 16001, 120105, 11509
+## Title: CatchUp
+## Notes: Compares your quests with your party and shows where to start a chain to catch up.
+## Author: you
+## Version: 0.1.0
+## SavedVariables: CatchUpDB
+## OptionalDeps: QuestieDB
+
+Core.lua
+QuestLog.lua
+Chains.lua
+Comm.lua
+UI.lua
