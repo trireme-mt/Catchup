@@ -6,8 +6,9 @@ Right now every party member needs CatchUp installed (each copy sends its own
 quest log to the group). A possible fallback for members without it:
 
 The modern client has `C_QuestLog.IsUnitOnQuest(unit, questID)` (Blizzard's UI
-uses it to count party members on a quest). Forever runs on the modern client,
-so it probably exists there, but this is unconfirmed.
+uses it to count party members on a quest). **Confirmed 2026-11-09: it exists
+on Forever** (build 1.60.1.70862, found by the StatProbe addon). Still unknown:
+whether it returns real answers for other party members - that's this test.
 
 **Test:** group with someone who does NOT have CatchUp and is on a quest whose
 ID you know (look it up on Wowhead), then type:
@@ -27,3 +28,8 @@ existing chain logic. Limitations: needs QuestieDB; can't see their quest
 titles or progress; only finds quests within the level range we check.
 
 **If it prints `false`, `nil`, or an error:** keep "everyone installs CatchUp".
+
+## Status (2026-11-09)
+- Not yet tested in a real party.
+- Full project handoff (both addons, Forever findings, next steps) is in
+  HANDOFF.md in the private GearScout repo.
